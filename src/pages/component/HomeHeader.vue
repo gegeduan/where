@@ -37,6 +37,7 @@ export default {
   color:#fff
   .header-left
     width:.68rem
+    padding-left:.1rem
     .back-icon
       text-align:center
       font-size:.4rem
