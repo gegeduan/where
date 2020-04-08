@@ -1,13 +1,16 @@
 <template>
   <div class="home">
-    我是首页
-    <router-link to='/List'>跳转</router-link>
+    <home-header></home-header>
   </div>
 </template>
 
 <script>
+import HomeHeader from '@/pages/component/HomeHeader'
 export default {
   name: 'Home',
+  components: {
+    HomeHeader
+  },
   data () {
     return {
     }
