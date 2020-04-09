@@ -2,7 +2,7 @@
   <div class="recommend">
   <p class='title'>热门推荐</p>
   <ul>
-      <li class='item border-bottom' v-for='(item, index) of recommendList' :key='index'>
+      <li class='item border-bottom' v-for='(item, index) of list' :key='index'>
           <img class='item-img' :src='item.imgUrl'>
           <div class='info'>
               <p class='info-title'>{{item.title}}</p>
@@ -17,40 +17,11 @@
 <script>
 export default {
   name: 'HomeRcommend',
+  props: {
+    list: Array
+  },
   data () {
     return {
-      recommendList: [
-        {
-          id: '0003',
-          title: '浦江郊野公园奇迹花园',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/2003/de/de11d542e3f0776da3.water.jpg_200x200_4a7e1531.jpg',
-          desc: '这里现在很火很多人都在评论它,快来一起开心吧.这里现在很火很多人都在评论它,快来一起开心吧.'
-        },
-        {
-          id: '0002',
-          title: '浦江郊野公园奇迹花园',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/2003/de/de11d542e3f0776da3.water.jpg_200x200_4a7e1531.jpg',
-          desc: '这里现在很火很多人都在评论它,快来一起开心吧.这里现在很火很多人都在评论它,快来一起开心吧.'
-        },
-        {
-          id: '0003',
-          title: '浦江郊野公园奇迹花园',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/2003/de/de11d542e3f0776da3.water.jpg_200x200_4a7e1531.jpg',
-          desc: '这里现在很火很多人都在评论它,快来一起开心吧.这里现在很火很多人都在评论它,快来一起开心吧.'
-        },
-        {
-          id: '0004',
-          title: '浦江郊野公园奇迹花园',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/2003/de/de11d542e3f0776da3.water.jpg_200x200_4a7e1531.jpg',
-          desc: '这里现在很火很多人都在评论它,快来一起开心吧.这里现在很火很多人都在评论它,快来一起开心吧.'
-        },
-        {
-          id: '0005',
-          title: '浦江郊野公园奇迹花园',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/2003/de/de11d542e3f0776da3.water.jpg_200x200_4a7e1531.jpg',
-          desc: '这里现在很火很多人都在评论它,快来一起开心吧.这里现在很火很多人都在评论它,快来一起开心吧.'
-        }
-      ]
     }
   }
 }

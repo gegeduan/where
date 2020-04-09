@@ -1,6 +1,6 @@
 <template>
     <div class='icons'>
-       <swiper>
+       <swiper :options="swiperOptions">
            <swiper-slide v-for='(single,index) of pages ' :key='index'>
                 <div class='icon' v-for='item of single' :key='item.id'>
                     <div class='icon-img'>
@@ -16,82 +16,20 @@
 <script>
 export default {
   name: 'HomeIcons',
+  props: {
+    list: Array
+  },
   data () {
     return {
-      iconList: [
-        {
-          id: '0001',
-          desc: '景点门票',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png'
-        },
-        {
-          id: '0002',
-          desc: '顾村赏樱',
-          imgUrl: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/91a810441506568937171df66f754375.png'
-
-        },
-        {
-          id: '0003',
-          desc: '景点门票景点门票景点门票',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png'
-        },
-        {
-          id: '0004',
-          desc: '顾村赏樱',
-          imgUrl: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/91a810441506568937171df66f754375.png'
-
-        },
-        {
-          id: '0005',
-          desc: '景点门票',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png'
-        },
-        {
-          id: '0006',
-          desc: '顾村赏樱',
-          imgUrl: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/91a810441506568937171df66f754375.png'
-
-        },
-        {
-          id: '0007',
-          desc: '景点门票',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png'
-        },
-        {
-          id: '0008',
-          desc: '顾村赏樱',
-          imgUrl: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/91a810441506568937171df66f754375.png'
-
-        },
-        {
-          id: '0005',
-          desc: '景点门票',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png'
-        },
-        {
-          id: '0006',
-          desc: '顾村赏樱',
-          imgUrl: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/91a810441506568937171df66f754375.png'
-
-        },
-        {
-          id: '0007',
-          desc: '景点门票',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png'
-        },
-        {
-          id: '0008',
-          desc: '顾村赏樱',
-          imgUrl: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/91a810441506568937171df66f754375.png'
-
-        }
-      ]
+      swiperOptions: {
+        autoPlay: false
+      }
     }
   },
   computed: {
     pages () {
       const pages = []
-      this.iconList.forEach((item, index) => {
+      this.list.forEach((item, index) => {
         const page = Math.floor(index / 8)
         if (!pages[page]) {
           pages[page] = []
