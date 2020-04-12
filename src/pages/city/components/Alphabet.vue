@@ -1,19 +1,15 @@
 <template>
   <div class="list">
-    <div class='item'>A</div>
-    <div class='item'>A</div>
-    <div class='item'>A</div>
-    <div class='item'>A</div>
-    <div class='item'>A</div>
-    <div class='item'>A</div>
-    <div class='item'>A</div>
-    <div class='item'>A</div>
+    <div class='item' v-for='(item, key) of listCities' :key='key'>{{key}}</div>
   </div>
 </template>
 
 <script>
 export default {
   name: 'CityAlphabet',
+  props: {
+    listCities: Object
+  },
   data () {
     return {
     }
