@@ -1,15 +1,18 @@
 <template>
   <div class="city">
       <city-header></city-header>
+      <city-search></city-search>
   </div>
 </template>
 
 <script>
 import CityHeader from './components/Header'
+import CitySearch from './components/Search'
 export default {
   name: 'City',
   components: {
-    CityHeader
+    CityHeader,
+    CitySearch
   },
   data () {
     return {
@@ -20,5 +23,4 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang='stylus' scoped>
-@import '~@/styles/varibles.styl'
 </style>
