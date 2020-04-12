@@ -1,78 +1,84 @@
 <template>
-  <div class="list">
-    <div class='area border-topbottom'>
-        <div class='title'>当前城市</div>
-        <div class='btn-list'>
-          <div class='btn'>北京</div>
-           <div class='btn'>北京</div>
-           <div class='btn'>北京</div>
-           <div class='btn'>北京</div>
-        </div>
-    </div>
-     <div class='area border-topbottom'>
-        <div class='title'>当前城市</div>
-        <div class='btn-list'>
-          <div class='btn'>北京</div>
-           <div class='btn'>北京</div>
-           <div class='btn'>北京</div>
-           <div class='btn'>北京</div>
-        </div>
-    </div>
-    <div class='area border-topbottom'>
-        <div class='title'>A</div>
-        <div class='item-list'>
-           <div class='item border-bottom'>阿拉尔</div>
-           <div class='item border-bottom'>阿拉尔</div>
-           <div class='item border-bottom'>阿拉尔</div>
-           <div class='item border-bottom'>阿拉尔</div>
-           <div class='item border-bottom'>阿拉尔</div>
-           <div class='item border-bottom'>阿拉尔</div>
-           <div class='item border-bottom'>阿拉尔</div>
-           <div class='item border-bottom'>阿拉尔</div>
-        </div>
-        <div class='title'>A</div>
-        <div class='item-list'>
-           <div class='item border-bottom'>阿拉尔</div>
-           <div class='item border-bottom'>阿拉尔</div>
-           <div class='item border-bottom'>阿拉尔</div>
-           <div class='item border-bottom'>阿拉尔</div>
-           <div class='item border-bottom'>阿拉尔</div>
-           <div class='item border-bottom'>阿拉尔</div>
-           <div class='item border-bottom'>阿拉尔</div>
-           <div class='item border-bottom'>阿拉尔</div>
-        </div>
-        <div class='title'>A</div>
-        <div class='item-list'>
-           <div class='item border-bottom'>阿拉尔</div>
-           <div class='item border-bottom'>阿拉尔</div>
-           <div class='item border-bottom'>阿拉尔</div>
-           <div class='item border-bottom'>阿拉尔</div>
-           <div class='item border-bottom'>阿拉尔</div>
-           <div class='item border-bottom'>阿拉尔</div>
-           <div class='item border-bottom'>阿拉尔</div>
-           <div class='item border-bottom'>阿拉尔</div>
-        </div>
-        <div class='title'>A</div>
-        <div class='item-list'>
-           <div class='item border-bottom'>阿拉尔</div>
-           <div class='item border-bottom'>阿拉尔</div>
-           <div class='item border-bottom'>阿拉尔</div>
-           <div class='item border-bottom'>阿拉尔</div>
-           <div class='item border-bottom'>阿拉尔</div>
-           <div class='item border-bottom'>阿拉尔</div>
-           <div class='item border-bottom'>阿拉尔</div>
-           <div class='item border-bottom'>阿拉尔</div>
-        </div>
-    </div>
+  <div class="list" ref='wrapper'>
+      <div>
+            <div class='area border-topbottom'>
+                <div class='title'>当前城市</div>
+                <div class='btn-list'>
+                <div class='btn'>北京</div>
+                <div class='btn'>北京</div>
+                <div class='btn'>北京</div>
+                <div class='btn'>北京</div>
+                </div>
+            </div>
+            <div class='area border-topbottom'>
+                <div class='title'>当前城市</div>
+                <div class='btn-list'>
+                <div class='btn'>北京</div>
+                <div class='btn'>北京</div>
+                <div class='btn'>北京</div>
+                <div class='btn'>北京</div>
+                </div>
+            </div>
+            <div class='area border-topbottom'>
+                <div class='title'>A</div>
+                <div class='item-list'>
+                <div class='item border-bottom'>阿拉尔</div>
+                <div class='item border-bottom'>阿拉尔</div>
+                <div class='item border-bottom'>阿拉尔</div>
+                <div class='item border-bottom'>阿拉尔</div>
+                <div class='item border-bottom'>阿拉尔</div>
+                <div class='item border-bottom'>阿拉尔</div>
+                <div class='item border-bottom'>阿拉尔</div>
+                <div class='item border-bottom'>阿拉尔</div>
+                </div>
+                <div class='title'>A</div>
+                <div class='item-list'>
+                <div class='item border-bottom'>阿拉尔</div>
+                <div class='item border-bottom'>阿拉尔</div>
+                <div class='item border-bottom'>阿拉尔</div>
+                <div class='item border-bottom'>阿拉尔</div>
+                <div class='item border-bottom'>阿拉尔</div>
+                <div class='item border-bottom'>阿拉尔</div>
+                <div class='item border-bottom'>阿拉尔</div>
+                <div class='item border-bottom'>阿拉尔</div>
+                </div>
+                <div class='title'>A</div>
+                <div class='item-list'>
+                <div class='item border-bottom'>阿拉尔</div>
+                <div class='item border-bottom'>阿拉尔</div>
+                <div class='item border-bottom'>阿拉尔</div>
+                <div class='item border-bottom'>阿拉尔</div>
+                <div class='item border-bottom'>阿拉尔</div>
+                <div class='item border-bottom'>阿拉尔</div>
+                <div class='item border-bottom'>阿拉尔</div>
+                <div class='item border-bottom'>阿拉尔</div>
+                </div>
+                <div class='title'>A</div>
+                <div class='item-list'>
+                <div class='item border-bottom'>阿拉尔</div>
+                <div class='item border-bottom'>阿拉尔</div>
+                <div class='item border-bottom'>阿拉尔</div>
+                <div class='item border-bottom'>阿拉尔</div>
+                <div class='item border-bottom'>阿拉尔</div>
+                <div class='item border-bottom'>阿拉尔</div>
+                <div class='item border-bottom'>阿拉尔</div>
+                <div class='item border-bottom'>阿拉尔</div>
+                </div>
+            </div>
+     </div>
   </div>
 </template>
 
 <script>
+import Bscroll from 'better-scroll'
 export default {
   name: 'CityList',
   data () {
     return {
     }
+  },
+  mounted () {
+    this.scroll = new Bscroll(this.$refs.wrapper)
   }
 }
 </script>
@@ -98,8 +104,8 @@ export default {
   .area
     .title
       padding-left:.2rem
-      height:.44rem
-      line-height:.44rem
+      height:.54rem
+      line-height:.54rem
       color:#666
       font-size:.26rem
       background:#eee
