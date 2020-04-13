@@ -8,12 +8,12 @@
                 </div>
             </div>
             <div class='area border-topbottom'>
-                <div class='title'>当前城市</div>
+                <div class='title'>热门城市</div>
                 <div class='btn-list'>
                 <div class='btn' v-for='item of listHotCities' :key='item.id'>{{item.name}}</div>
                 </div>
             </div>
-            <div class='area border-topbottom' v-for='(item, key) of listCities' :key='key'>
+            <div class='area border-topbottom' v-for='(item, key) of listCities' :key='key' :ref='key'>
                 <div class='title'>{{key}}</div>
                 <div class='item-list'>
                 <div class='item border-bottom' v-for='ite of item' :key='ite.id'>{{ite.name}}</div>
@@ -29,7 +29,8 @@ export default {
   name: 'CityList',
   props: {
     listCities: Object,
-    listHotCities: Array
+    listHotCities: Array,
+    ListLetter: String
   },
   data () {
     return {
@@ -37,6 +38,14 @@ export default {
   },
   mounted () {
     this.scroll = new Bscroll(this.$refs.wrapper)
+  },
+  watch: {
+    ListLetter () {
+      if (this.ListLetter) {
+        const element = this.$refs[this.ListLetter][0]
+        this.scroll.scrollToElement(element)
+      }
+    }
   }
 }
 </script>
