@@ -4,19 +4,31 @@
             <div class='area border-topbottom'>
                 <div class='title'>当前城市</div>
                 <div class='btn-list'>
-                <div class='btn'>北京</div>
+                <div class='btn'>{{this.city}}</div>
                 </div>
             </div>
             <div class='area border-topbottom'>
                 <div class='title'>热门城市</div>
                 <div class='btn-list'>
-                <div class='btn' v-for='item of listHotCities' :key='item.id'>{{item.name}}</div>
+                <div class='btn'
+                 v-for='item of listHotCities'
+                 :key='item.id'
+                 @click='handleClick(item.name)'
+                  >{{item.name}}</div>
                 </div>
             </div>
-            <div class='area border-topbottom' v-for='(item, key) of listCities' :key='key' :ref='key'>
+            <div class='area border-topbottom'
+            v-for='(item, key) of listCities'
+            :key='key'
+            :ref='key'
+            >
                 <div class='title'>{{key}}</div>
                 <div class='item-list'>
-                <div class='item border-bottom' v-for='ite of item' :key='ite.id'>{{ite.name}}</div>
+                <div class='item border-bottom'
+                 v-for='ite of item'
+                  :key='ite.id'
+                  @click='handleClick(ite.name)'
+                  >{{ite.name}}</div>
                 </div>
             </div>
      </div>
@@ -25,6 +37,7 @@
 
 <script>
 import Bscroll from 'better-scroll'
+import { mapState } from 'vuex'
 export default {
   name: 'CityList',
   props: {
@@ -34,6 +47,16 @@ export default {
   },
   data () {
     return {
+    }
+  },
+  // 把state的数据映射到computed属性里的city属性里
+  computed: {
+    ...mapState(['city'])
+  },
+  methods: {
+    handleClick (city) {
+      this.$store.dispatch('changeCity', city)
+      this.$router.push('/')
     }
   },
   mounted () {

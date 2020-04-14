@@ -9,6 +9,7 @@
             <div class='item-content border-bottom'
             v-for='item of list'
             :key='item.id'
+            @click='handleClick(item.name)'
             >{{item.name}}</div>
             <div class='item-content border-bottom' v-show='hasNoData '>没有找到匹配项</div>
          </div>
@@ -28,6 +29,12 @@ export default {
       keyword: '',
       list: [],
       timer: null
+    }
+  },
+  methods: {
+    handleClick (city) {
+      this.$store.dispatch('changeCity', city)
+      this.$router.push('/')
     }
   },
   computed: {
