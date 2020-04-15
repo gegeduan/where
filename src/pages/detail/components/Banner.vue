@@ -33,11 +33,9 @@ export default {
   methods: {
     handleBannerClick () {
       this.showGallery = true
-      console.log(this.showGallery)
     },
     handleGalleryClose () {
       this.showGallery = false
-      console.log(this.showGallery)
     }
   }
 }
